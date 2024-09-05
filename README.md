@@ -44,7 +44,7 @@ GET: api/products/
 ```
 Корзина продуктов (только для авторизированных пользователей):
 ```
-GET: api/cart/
-DELETE: api/cart/clear/ - удаление всей корзины
+GET: api/cart/ - список продуктов в корзине
+DELETE: api/cart/clear/ - полная очистка корзины
 POST, PUT, DELETE: api/cart/items/ - добавление, изменение количества и удаление продукта
 ```
