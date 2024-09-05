@@ -35,7 +35,15 @@ GET: admin/
 Регистрация пользователя и получение токена:
 ```
 POST: api/users/register/
+   {
+     "username": "name",
+     "password": "12345"
+   }
 POST: api/users/token/
+   {
+     "username": "name",
+     "password": "12345"
+   }
 ```
 Список категорий и продуктов (доступны всем пользователям):
 ```
