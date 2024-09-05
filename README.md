@@ -30,29 +30,29 @@
 ## Доступные эндпоинты
 Админка проекета:
 ```
-GET: admin/
+   GET: admin/
 ```
 Регистрация пользователя и получение токена:
 ```
-POST: api/users/register/
-   {
-     "username": "name",
-     "password": "12345"
-   }
-POST: api/users/token/
-   {
-     "username": "name",
-     "password": "12345"
-   }
+   POST: api/users/register/
+      {
+        "username": "name",
+        "password": "12345"
+      }
+   POST: api/users/token/
+      {
+        "username": "name",
+        "password": "12345"
+      }
 ```
 Список категорий и продуктов (доступны всем пользователям):
 ```
-GET: api/categories/
-GET: api/products/
+   GET: api/categories/
+   GET: api/products/
 ```
 Корзина продуктов (только для авторизированных пользователей):
 ```
-GET: api/cart/ - список продуктов в корзине
-DELETE: api/cart/clear/ - полная очистка корзины
-POST, PUT, DELETE: api/cart/items/ - добавление, изменение количества и удаление продукта
+   GET: api/cart/ - список продуктов в корзине
+   DELETE: api/cart/clear/ - полная очистка корзины
+   POST, PUT, DELETE: api/cart/items/ - добавление, изменение количества и удаление продукта
 ```
