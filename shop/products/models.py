@@ -1,4 +1,5 @@
 from django.db import models
+from versatileimagefield import fields
 
 
 class Category(models.Model):
@@ -17,7 +18,7 @@ class Category(models.Model):
     )
     image = models.ImageField(
         verbose_name='Картинка',
-        upload_to='products/images/',
+        upload_to='products/',
         blank=False,
     )
 
@@ -38,7 +39,7 @@ class Subcategory(models.Model):
     )
     image = models.ImageField(
         verbose_name='Картинка',
-        upload_to='products/images/',
+        upload_to='products/',
         blank=False,
     )
     category = models.ForeignKey(
@@ -62,10 +63,9 @@ class Product(models.Model):
         blank=False,
         unique=True,
     )
-    images = models.ImageField(
+    image = fields.VersatileImageField(
         verbose_name='Картинка',
-        upload_to='products/images/',
-        blank=False,
+        upload_to='products/'
     )
     price = models.DecimalField(
         verbose_name='Стоимость',
